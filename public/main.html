@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game</title>
+        <script src="main.js" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+            body { /* sets the background and centers the content */
+                display:flex; 
+                flex-direction:column; 
+                justify-content:center;
+                align-items: center;
+                min-height:100vh;
+                background-image: url(background.jpeg);
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover; 
+            }
+            .gameboard { /* fixes the gameboard towards the top of the page */
+                position: fixed;
+                top: 10%;
+            }
+            .row{ /* allows content to be resized without rows */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #phrase { /* sets style qualities for the phrase at top of gameboard*/
+                font-size: 80px;
+                font-family: 'Balsamiq Sans', cursive;
+                color: aquamarine;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-color: #F2E963;
+                -webkit-text-stroke-width: 4px;
+            }
+            #rhymeWord{ /* sets style properties for the rhyme word in the gameboard */
+                font-size: 50px;
+                font-family: Poppins;
+            }
+            #input { /* sets the stylistic qualities for the input box */
+                background-image: url(graphpaper.jpg); /* graph paper background in keeping with home-y feel */
+                min-height: 80px;
+                font-size: x-large;
+                font-family: Poppins;
+                text-align: center;
+            }
+            #input:hover, #input:focus { /* animates input box */
+                border-color: #F2E963;
+                box-shadow: 0 0 20px #F2E963;
+            }
+
+            #bottom-row { /* fixes scoreboard and countdown to bottom of screen */
+                position: fixed;
+                bottom: 10%;
+                width: 100vw;
+            }
+            #counter { /* fixes countdown to left corner */
+                position: fixed;
+                left: 7%;
+                font-size:60px;
+                font-family:'Balsamiq Sans', cursive;
+                -webkit-text-fill-color: white;
+                -webkit-text-stroke-color: #ABDBE3;
+                -webkit-text-stroke-width: 4px;
+                padding: 10px;
+            }
+            #scorer { /* fixes scoreboard to right corner */
+                position: fixed;
+                right: 7%;
+                font-size:60px;
+                font-family:'Balsamiq Sans', cursive;
+                -webkit-text-fill-color: white;
+                -webkit-text-stroke-color: #F285EB;
+                -webkit-text-stroke-width: 4px;
+                padding: 10px;
+            }
+            #score { /* floats score to left to balance out page */
+                float: right;
+            }
+            #timer{ /* floats timer to left to balance out page */
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gameboard">
+            <div class="row">
+                <div class="col-auto" id="phrase">
+                    <p id="prompt">Rhyme this word</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-auto" id="rhymeWord">
+                    <p id="word"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-auto">
+                    <input type="input" id="input" class="form-control" aria-describedby="passwordHelpInline" required placeholder="enter rhymes!">
+                </div>
+            </div>
+        </div>
+        <div class="row" id="bottom-row">
+            <div class="col-auto" id="counter">
+                <p id=countdown>Countdown</p>
+                <p id="timer">60</p>
+            </div>
+            <div class="col-auto" id="scorer">
+                <p id="scoreboard">Score</p>
+                <p id="score">0</p>
+            </div>
+        </div>
+    </body>
+</html>

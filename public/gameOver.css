@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+
+body {
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    grid-template-rows: 180px 180px 180px;
+
+    background-image:url('background.jpeg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    grid-template-areas:
+        "main main main"
+        "rhymes rhymes rhymes"
+        "playagain playagain playagain";
+}
+
+#scoreboard {
+    display: grid;
+    grid-area: main;
+    font-size: 80px;
+    font-family:'Balsamiq Sans', cursive;
+    -webkit-text-fill-color:darkcyan;
+    -webkit-text-stroke-color: #90EE90;
+    -webkit-text-stroke-width: 4px;
+    text-align:center;
+    justify-content: center;
+    align-content:center
+}
+
+#playagainbutton {
+    display: grid;
+    grid-area: playagain;
+    align-content: center;
+    justify-content: center;
+}
+
+#show_rhymes_button {
+    display: grid;
+    grid-area: rhymes;
+    align-content: center;
+    justify-content: center;
+}
+
+#play_again_button {
+    background-color: #F29191;
+    border-radius: 12px;
+    font-size: 60px;
+    border: none;
+    font-family:'Balsamiq Sans', cursive;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-color: #F2ACD3;
+    -webkit-text-stroke-width: 4px;
+    padding: 20px;
+}
+
+#play_again_button:hover {
+    font-size:55px;
+    padding:15px;
+}
+
+#rhyme_button {
+    background-color: #F2E963;
+    border-radius: 12px;
+    font-size:60px;
+    border: none;
+    font-family:'Balsamiq Sans', cursive;
+    -webkit-text-fill-color:white;
+    -webkit-text-stroke-color: #F285EB;
+    -webkit-text-stroke-width: 4px;
+    padding: 20px;
+}
+
+#rhyme_button:hover {
+    font-size:55px;
+    padding: 15px;
+}
+
+

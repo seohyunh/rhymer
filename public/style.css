@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    display:flex; 
+    flex-direction:column; 
+    justify-content:center;
+    align-items: center;
+    min-height:100vh;
+    background-image: url(background.jpeg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+      
+}
+
+#wordmark {
+    height: auto;
+    width: 100%;
+    max-width: 33vw;
+    max-height: 40vh;
+}
+
+
+.form_wrap { /* creates a empty div with a gradient border */
+    height: auto; 
+    min-width: 500px;
+    padding: 10px;
+    background: linear-gradient(135deg, #F2E963, #F29191)
+}
+
+.form { /* div for form content--padded to reveal the wrapper */
+    height: auto;
+    padding: 25px 10px 10px 10px;
+    background-color: white;
+    min-width: 500px;
+    
+}
+
+#username:hover, #password:hover, #username:focus, #password:focus, #confirm_password:hover, #confirm_password:focus { 
+    /* entry boxes glow when hovered or clicked */
+    outline: none !important;
+    border-color: #F2BEA0;
+    box-shadow: 0 0 10px #F2BEA0;
+}
+
+.row { /* for spacing-- padding ctrls space b/t element and its border; margin controls space b/t border and other elements */
+    padding: 10px;
+    margin: 2px;
+}
+
+label{ /* used to regulate space b/t label and input box */
+    display: block;
+    float: left;
+    clear: left;
+    width: 75px;
+    text-align: right;
+    color: #3a3b3c !important;
+    font-family: Poppins;
+}
+input { /* used to regulate space b/t label and input box */
+    display: block;
+    float: left;
+    font-family: Poppins;
+}
+
+.btn-wrap { /* centers the button within its row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    padding: 10px;
+}
+
+button { 
+    width: 125px; /* sets a more appealing width for the button */
+    color: #3a3b3c !important; /* makes button color consistent with labels */
+    border-color: #F29191 !important; /* sets border color */
+}
+
+button:hover, button:focus { /* brings animations into line with rest of styling*/
+    background-color: #F29191 !important;
+    outline: none !important;
+    border-color: #F29191 !important;
+    box-shadow: 0 0 10px #F29191 !important;
+
+}
+
+.prompt-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#prompt {
+    color: #3a3b3c;
+    font-family: Poppins;
+}
+
+#prompt-link {
+    color: #3a3b3c;
+    text-decoration: none;
+}
+
+#prompt-link:hover {
+    color: #F2BEA0;
+}
+
+#message-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+#message {
+    font-family: Poppins;
+    color: #3a3b3c;
+}
